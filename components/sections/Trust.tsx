@@ -42,7 +42,7 @@ const partners = [
 
 export default function Trust() {
   return (
-    <section className="px-6 py-24">
+    <section id="security">
       <div className="mx-auto max-w-7xl">
 
         <FadeUp>
