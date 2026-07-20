@@ -1,51 +1,64 @@
+"use client";
+
+import FadeUp from "@/components/ui/FadeUp";
+import { Wallet, TrendingUp, ShieldCheck } from "lucide-react";
+
 export default function AppPreview() {
   return (
-    <div className="mx-auto mt-16 w-full max-w-sm rounded-[32px] border border-white/10 bg-white/5 p-5 shadow-2xl backdrop-blur-xl">
+    <FadeUp>
+      <div className="relative mx-auto w-full max-w-md">
 
-      <div className="mb-6 flex items-center justify-between">
-        <div>
-          <p className="text-sm text-gray-400">Total Balance</p>
-          <h2 className="mt-1 text-3xl font-bold">$24,580.42</h2>
-        </div>
+        {/* Glow */}
+        <div className="absolute -inset-10 rounded-full bg-violet-600/20 blur-3xl" />
 
-        <div className="rounded-full bg-violet-500/20 px-3 py-1 text-sm text-violet-300">
-          +12.8%
-        </div>
-      </div>
+        {/* Phone */}
+        <div className="relative rounded-[40px] border border-white/10 bg-gradient-to-br from-[#18181B] to-[#09090B] p-6 shadow-2xl">
 
-      <div className="mb-6 h-32 rounded-2xl bg-gradient-to-r from-violet-600/30 to-blue-500/30" />
-
-      <div className="grid grid-cols-4 gap-3">
-        {["Send", "Receive", "Swap", "Buy"].map((item) => (
-          <button
-            key={item}
-            className="rounded-xl bg-white/5 py-3 text-sm transition hover:bg-violet-500/20"
-          >
-            {item}
-          </button>
-        ))}
-      </div>
-
-      <div className="mt-8 space-y-4">
-        {[
-          ["BTC", "0.245 BTC", "$14,800"],
-          ["ETH", "3.84 ETH", "$8,200"],
-          ["USDT", "1,580 USDT", "$1,580"],
-        ].map(([symbol, amount, value]) => (
-          <div
-            key={symbol}
-            className="flex items-center justify-between rounded-xl border border-white/10 bg-white/5 p-4"
-          >
+          <div className="mb-8 flex items-center justify-between">
             <div>
-              <h3 className="font-semibold">{symbol}</h3>
-              <p className="text-sm text-gray-400">{amount}</p>
+              <p className="text-sm text-gray-400">Total Balance</p>
+              <h2 className="mt-2 text-3xl font-bold">$24,845.22</h2>
             </div>
 
-            <p className="font-medium">{value}</p>
+            <div className="rounded-2xl bg-violet-600/20 p-3">
+              <Wallet className="text-violet-400" size={28} />
+            </div>
           </div>
-        ))}
-      </div>
 
-    </div>
+          <div className="rounded-2xl bg-white/5 p-4">
+            <div className="mb-4 flex justify-between">
+              <span>Bitcoin</span>
+              <span>0.542 BTC</span>
+            </div>
+
+            <div className="mb-4 flex justify-between">
+              <span>Ethereum</span>
+              <span>8.12 ETH</span>
+            </div>
+
+            <div className="flex justify-between">
+              <span>Solana</span>
+              <span>124 SOL</span>
+            </div>
+          </div>
+
+        </div>
+
+        {/* Floating Card 1 */}
+        <div className="absolute -left-10 top-20 rounded-2xl border border-white/10 bg-white/10 p-4 backdrop-blur-xl">
+          <TrendingUp className="mb-2 text-green-400" size={26} />
+          <p className="text-sm text-gray-300">Portfolio</p>
+          <h3 className="font-bold text-green-400">+18.2%</h3>
+        </div>
+
+        {/* Floating Card 2 */}
+        <div className="absolute -right-8 bottom-10 rounded-2xl border border-white/10 bg-white/10 p-4 backdrop-blur-xl">
+          <ShieldCheck className="mb-2 text-violet-400" size={26} />
+          <p className="text-sm text-gray-300">Security</p>
+          <h3 className="font-bold">Protected</h3>
+        </div>
+
+      </div>
+    </FadeUp>
   );
 }
