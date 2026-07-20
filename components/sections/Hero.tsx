@@ -33,13 +33,19 @@ export default function Hero() {
 
           <FadeUp delay={0.3}>
             <div className="mt-10 flex flex-wrap gap-4">
-              <button className="rounded-xl bg-violet-600 px-6 py-3 font-semibold transition duration-300 hover:scale-105 hover:bg-violet-500 active:scale-95">
+              <a
+                href="#waitlist"
+                className="rounded-xl bg-violet-600 px-6 py-3 font-semibold transition duration-300 hover:scale-105 hover:bg-violet-500 active:scale-95"
+              >
                 Join Waitlist
-              </button>
+              </a>
 
-              <button className="rounded-xl border border-white/10 px-6 py-3 transition duration-300 hover:scale-105 hover:border-violet-500 hover:bg-white/5 active:scale-95">
+              <a
+                href="#features"
+                className="rounded-xl border border-white/10 px-6 py-3 transition duration-300 hover:scale-105 hover:border-violet-500 hover:bg-white/5 active:scale-95"
+              >
                 Learn More
-              </button>
+              </a>
             </div>
           </FadeUp>
         </div>
