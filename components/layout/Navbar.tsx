@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useState, useEffect } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu } from "lucide-react";
 import MobileMenu from "./MobileMenu";
 
 export default function Navbar() {
@@ -22,7 +22,7 @@ export default function Navbar() {
   return (
     <>
       <header
-        className={`fixed top-0 left-0 z-50 w-full transition-all duration-300 ${
+        className={`fixed left-0 top-0 z-50 w-full transition-all duration-300 ${
           scrolled
             ? "border-b border-white/10 bg-black/70 backdrop-blur-xl"
             : "bg-transparent"
@@ -43,25 +43,30 @@ export default function Navbar() {
 
           {/* Desktop Menu */}
           <nav className="hidden items-center gap-8 lg:flex">
-            <Link href="#features" className="text-gray-300 transition hover:text-white">
+
+            <Link href="/#features" className="text-gray-300 hover:text-white">
               Features
             </Link>
 
-            <Link href="#security" className="text-gray-300 transition hover:text-white">
+            <Link href="/#security" className="text-gray-300 hover:text-white">
               Security
             </Link>
 
-            <Link href="#roadmap" className="text-gray-300 transition hover:text-white">
+            <Link href="/#roadmap" className="text-gray-300 hover:text-white">
               Roadmap
             </Link>
 
-            <Link href="#docs" className="text-gray-300 transition hover:text-white">
+            <Link href="/docs" className="text-gray-300 hover:text-white">
               Docs
             </Link>
 
-            <button className="rounded-xl bg-violet-600 px-5 py-3 font-semibold transition hover:scale-105 hover:bg-violet-500">
+            <Link
+              href="/#waitlist"
+              className="rounded-xl bg-violet-600 px-5 py-3 font-semibold transition hover:bg-violet-500"
+            >
               Join Waitlist
-            </button>
+            </Link>
+
           </nav>
 
           {/* Mobile Button */}
