@@ -51,7 +51,10 @@ const features = [
 
 export default function Features() {
   return (
-    <section className="px-6 py-24">
+    <section
+  id="features"
+  className="..."
+>
       <div className="mx-auto max-w-7xl">
 
         <FadeUp>
