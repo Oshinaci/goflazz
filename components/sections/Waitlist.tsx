@@ -30,7 +30,10 @@ export default function Waitlist() {
   }
 
   return (
-    <section className="mx-auto max-w-xl px-6 py-24">
+    <section
+  id="waitlist"
+  className="mx-auto max-w-xl px-6 py-24"
+>
       <div className="rounded-3xl border border-white/10 bg-white/5 p-8 backdrop-blur">
 
         <h2 className="text-center text-3xl font-bold">
