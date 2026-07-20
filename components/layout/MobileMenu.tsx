@@ -62,7 +62,7 @@ export default function MobileMenu({
             {/* Navigation */}
             <nav className="flex flex-col gap-6 text-lg">
               <Link
-                href="#features"
+                href="/#features"
                 onClick={onClose}
                 className="text-gray-300 transition hover:text-white"
               >
@@ -70,7 +70,7 @@ export default function MobileMenu({
               </Link>
 
               <Link
-                href="#security"
+                href="/#security"
                 onClick={onClose}
                 className="text-gray-300 transition hover:text-white"
               >
@@ -78,7 +78,7 @@ export default function MobileMenu({
               </Link>
 
               <Link
-                href="#roadmap"
+                href="/#roadmap"
                 onClick={onClose}
                 className="text-gray-300 transition hover:text-white"
               >
@@ -86,7 +86,7 @@ export default function MobileMenu({
               </Link>
 
               <Link
-                href="#docs"
+                href="/docs"
                 onClick={onClose}
                 className="text-gray-300 transition hover:text-white"
               >
@@ -96,16 +96,17 @@ export default function MobileMenu({
 
             {/* CTA */}
             <div className="mt-auto">
-              <button
-                className="w-full rounded-xl bg-violet-600 py-4 font-semibold text-white transition hover:bg-violet-500"
+              <Link
+                href="/#waitlist"
                 onClick={onClose}
+                className="block w-full rounded-xl bg-violet-600 py-4 text-center font-semibold text-white transition hover:bg-violet-500"
               >
                 Join Waitlist
-              </button>
+              </Link>
             </div>
           </motion.aside>
         </>
       )}
     </AnimatePresence>
   );
-                }
+}
