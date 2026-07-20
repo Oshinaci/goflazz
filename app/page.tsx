@@ -5,10 +5,13 @@ import Features from "@/components/sections/Features";
 
 export default function Home() {
   return (
-    <main className="overflow-x-hidden bg-[#050816] text-white">
+    <main className="min-h-screen overflow-x-hidden bg-[#050816] text-white">
       <Navbar />
+
       <Hero />
+
       <Stats />
+
       <Features />
     </main>
   );
